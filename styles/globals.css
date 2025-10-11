@@ -1,0 +1,339 @@
+/* 
+ * Estilos globales para Tolino Labs Landing Page
+ * Optimizado para rendimiento y accesibilidad
+ * Paleta de colores del proyecto Tolino Labs
+ */
+
+/* Variables de color del proyecto */
+:root {
+  /* Colores principales */
+  --color-silver: #a7a7a8;
+  --color-dim-gray: #6d6d6e;
+  --color-black: #000000;
+  --color-white: #fefefd;
+  --color-spring-green: #5efc8d;
+  
+  /* Variantes del verde principal */
+  --color-spring-green-light: #7ffda5;
+  --color-spring-green-dark: #3feb75;
+  
+  /* Escala de grises mejorada para contraste */
+  --color-gray-50: #f8f9fa;
+  --color-gray-100: #f1f3f4;
+  --color-gray-200: #e8eaed;
+  --color-gray-300: #dadce0;
+  --color-gray-400: #9aa0a6;
+  --color-gray-500: #5f6368;
+  --color-gray-600: #3c4043;
+  --color-gray-700: #202124;
+  --color-gray-800: #171717;
+  --color-gray-900: #0f0f0f;
+  
+  /* Escala de verdes para mejor contraste */
+  --color-green-50: #f0fdf4;
+  --color-green-100: #dcfce7;
+  --color-green-200: #bbf7d0;
+  --color-green-300: #86efac;
+  --color-green-400: #4ade80;
+  --color-green-500: #5efc8d;
+  --color-green-600: #16a34a;
+  --color-green-700: #15803d;
+  --color-green-800: #166534;
+  --color-green-900: #14532d;
+  
+  /* Colores de acento complementarios */
+  --color-accent: #10b981;
+  --color-accent-light: #34d399;
+  --color-accent-dark: #059669;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+}
+
+/* Reset y estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--color-dim-gray);
+  background-color: var(--color-white);
+  overflow-x: hidden;
+}
+
+/* Mejoras de accesibilidad */
+:focus-visible {
+  outline: 2px solid var(--color-spring-green);
+  outline-offset: 2px;
+}
+
+/* Skip to content link para accesibilidad */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--color-black);
+  color: var(--color-spring-green);
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 100;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Animaciones personalizadas */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Utilidades personalizadas */
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Optimización de carga de imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Lazy loading para imágenes */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Scroll suave para navegación interna */
+html {
+  scroll-padding-top: 80px; /* Ajustar según altura del header si existe */
+}
+
+/* Mejoras de rendimiento con will-change en elementos animados */
+.hover-scale {
+  will-change: transform;
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos para modo reducción de movimiento (accesibilidad) */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mejoras de contraste para accesibilidad WCAG */
+a {
+  color: var(--color-dim-gray);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover, a:focus {
+  color: var(--color-spring-green-dark);
+  text-decoration: underline;
+}
+
+/* Botones con estados mejorados */
+button {
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Formularios con estilos mejorados */
+input, textarea, select {
+  font-family: inherit;
+  font-size: 100%;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--color-silver);
+  opacity: 1;
+}
+
+/* Estilos para elementos de carga */
+.loading {
+  position: relative;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid var(--color-spring-green);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spinner 0.6s linear infinite;
+}
+
+@keyframes spinner {
+  to { transform: rotate(360deg); }
+}
+
+/* Utilidad para ocultar elementos visualmente pero mantenerlos accesibles */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Mejoras de rendimiento con contenido crítico */
+.critical-content {
+  contain: layout style paint;
+}
+
+/* Estilos para mantener aspect ratio en contenedores */
+.aspect-ratio-16-9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-ratio-1-1 {
+  aspect-ratio: 1 / 1;
+}
+
+/* Utilidades de gradientes personalizados */
+.gradient-text {
+  background: linear-gradient(to right, var(--color-spring-green), var(--color-spring-green-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Mejoras de tipografía */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--color-black);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Contenedor principal con max-width */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive utilities */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+/* Dark mode support (opcional para futuras implementaciones) */
+@media (prefers-color-scheme: dark) {
+  /* Aquí se pueden agregar estilos para modo oscuro si es necesario */
+}
+
+/* Print styles para optimización de impresión */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  
+  a, a:visited {
+    text-decoration: underline;
+  }
+  
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  
+  img {
+    max-width: 100% !important;
+  }
+  
+  @page {
+    margin: 0.5cm;
+  }
+  
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+

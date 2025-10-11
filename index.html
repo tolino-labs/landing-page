@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tolino Labs | Transformación Digital con IA y Cloud Computing</title>
+  <meta name="description" content="Tolino Labs transforma negocios con inteligencia artificial y cloud computing.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Colores base originales
+            'tolino-silver': '#a7a7a8',
+            'tolino-gray': '#6d6d6e',
+            'tolino-black': '#000000',
+            'tolino-white': '#fefefd',
+            'tolino-green': '#5efc8d',
+            'tolino-green-light': '#7ffda5',
+            'tolino-green-dark': '#3feb75',
+            
+            // Colores mejorados para contraste
+            'tolino-gray-50': '#f8f9fa',
+            'tolino-gray-100': '#f1f3f4',
+            'tolino-gray-200': '#e8eaed',
+            'tolino-gray-300': '#dadce0',
+            'tolino-gray-400': '#9aa0a6',
+            'tolino-gray-500': '#5f6368',
+            'tolino-gray-600': '#3c4043',
+            'tolino-gray-700': '#202124',
+            'tolino-gray-800': '#171717',
+            'tolino-gray-900': '#0f0f0f',
+            
+            // Verdes con mejor contraste
+            'tolino-green-50': '#f0fdf4',
+            'tolino-green-100': '#dcfce7',
+            'tolino-green-200': '#bbf7d0',
+            'tolino-green-300': '#86efac',
+            'tolino-green-400': '#4ade80',
+            'tolino-green-500': '#5efc8d', // Original
+            'tolino-green-600': '#16a34a',
+            'tolino-green-700': '#15803d',
+            'tolino-green-800': '#166534',
+            'tolino-green-900': '#14532d',
+            
+            // Colores de acento complementarios
+            'tolino-accent': '#10b981', // Verde esmeralda para contraste
+            'tolino-accent-light': '#34d399',
+            'tolino-accent-dark': '#059669',
+            'tolino-warning': '#f59e0b', // Amarillo para alertas
+            'tolino-error': '#ef4444', // Rojo para errores
+            'tolino-info': '#3b82f6', // Azul para información
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="styles/globals.css" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  </style>
+</head>
+<body class="antialiased">
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-tolino-white/98 backdrop-blur-md shadow-lg border-b border-tolino-gray-200">
+  <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4">
+    <div class="flex items-center justify-between">
+      <a href="#hero" class="flex items-center gap-2">
+        <div class="w-10 h-10 bg-gradient-to-br from-tolino-green to-tolino-green-dark rounded-lg flex items-center justify-center shadow-md">
+          <span class="text-tolino-black font-bold text-xl">T</span>
+        </div>
+        <span class="text-xl font-bold text-tolino-gray-800">Tolino Labs</span>
+      </a>
+      <div class="hidden lg:flex items-center gap-8">
+        <a href="#servicios" class="text-tolino-gray-600 hover:text-tolino-green-600 font-medium transition-colors">Servicios</a>
+        <a href="#productos" class="text-tolino-gray-600 hover:text-tolino-green-600 font-medium transition-colors">Productos</a>
+        <a href="#resultados" class="text-tolino-gray-600 hover:text-tolino-green-600 font-medium transition-colors">Resultados</a>
+        <a href="#casos-exito" class="text-tolino-gray-600 hover:text-tolino-green-600 font-medium transition-colors">Casos</a>
+        <a href="#contacto" class="px-6 py-2.5 bg-tolino-green hover:bg-tolino-green-600 text-tolino-black font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg">Contacto</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="h-20"></div>
+
+<main>
+<!-- Hero Section: Primera impresión con propuesta de valor clara -->
+<section id="hero" class="relative bg-gradient-to-br from-tolino-gray-900 via-tolino-gray-800 to-tolino-black text-tolino-white overflow-hidden">
+  <!-- Patrón de fondo decorativo -->
+  <div class="absolute inset-0 opacity-8">
+    <div class="absolute inset-0" style="background-image: radial-gradient(circle at 2px 2px, #5efc8d 1px, transparent 0); background-size: 48px 48px;"></div>
+  </div>
+  
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-28 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-12 items-center">
+      
+      <!-- Contenido principal -->
+      <div class="text-center lg:text-left" data-aos="fade-right">
+        <!-- Badge de credibilidad -->
+        <div class="inline-flex items-center gap-2 bg-tolino-green/15 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-tolino-green/40 shadow-lg">
+          <svg class="w-5 h-5 text-tolino-green" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <span class="text-sm font-semibold text-tolino-green">Líderes en Transformación Digital con IA</span>
+        </div>
+        
+        <!-- Título principal optimizado para SEO y conversión -->
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 text-tolino-white">
+          Transformamos tu negocio con
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-tolino-green to-tolino-green-light">
+            Inteligencia Artificial
+          </span>
+          y Cloud Computing
+        </h1>
+        
+        <!-- Propuesta de valor clara -->
+        <p class="text-lg sm:text-xl text-tolino-gray-200 mb-8 leading-relaxed">
+          Automatizamos procesos complejos, optimizamos operaciones y aumentamos tu productividad hasta un <strong class="text-tolino-green font-bold">+40%</strong> en menos de 30 días.
+        </p>
+        
+        <!-- CTAs principales con jerarquía visual -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+          <a href="#contacto" 
+             class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg bg-tolino-green hover:bg-tolino-green-dark text-tolino-black transition-all duration-300 shadow-xl hover:shadow-2xl hover:shadow-tolino-green/20 hover:scale-105 transform"
+             aria-label="Solicitar consultoría gratuita">
+            Consultoría Gratuita
+            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+          
+          <a href="#casos-exito" 
+             class="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-lg bg-tolino-white/10 backdrop-blur-sm border-2 border-tolino-green/30 hover:bg-tolino-green/20 hover:border-tolino-green transition-all duration-300 text-tolino-white"
+             aria-label="Ver casos de éxito">
+            Ver Casos de Éxito
+          </a>
+        </div>
+        
+        <!-- Prueba social con métricas clave -->
+        <div class="grid grid-cols-3 gap-4 pt-8 border-t border-tolino-green/30">
+          <div class="text-center lg:text-left">
+            <div class="text-3xl font-bold text-tolino-green">300%</div>
+            <div class="text-sm text-tolino-gray-300 font-medium">ROI Promedio</div>
+          </div>
+          <div class="text-center lg:text-left">
+            <div class="text-3xl font-bold text-tolino-green">&lt;30</div>
+            <div class="text-sm text-tolino-gray-300 font-medium">Días Setup</div>
+          </div>
+          <div class="text-center lg:text-left">
+            <div class="text-3xl font-bold text-tolino-green">99.9%</div>
+            <div class="text-sm text-tolino-gray-300 font-medium">Disponibilidad</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Visual/Ilustración (se puede reemplazar con imagen real) -->
+      <div class="relative hidden lg:block" data-aos="fade-left">
+        <div class="relative z-10">
+          <!-- Placeholder para ilustración de IA/Tech -->
+          <div class="aspect-square rounded-2xl bg-gradient-to-br from-tolino-green/20 to-tolino-green-dark/20 backdrop-blur-sm border border-tolino-green/20 p-8 flex items-center justify-center">
+            <div class="text-center">
+              <!-- Icono de IA animado -->
+              <div class="w-32 h-32 mx-auto mb-6 relative">
+                <div class="absolute inset-0 bg-gradient-to-br from-tolino-green to-tolino-green-dark rounded-full animate-pulse"></div>
+                <svg class="absolute inset-4 text-tolino-black" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <div class="space-y-3">
+                <div class="flex items-center gap-2 bg-tolino-white/10 rounded-lg px-4 py-2">
+                  <div class="w-2 h-2 bg-tolino-green rounded-full animate-pulse"></div>
+                  <span class="text-sm text-tolino-white">IA Procesando...</span>
+                </div>
+                <div class="flex items-center gap-2 bg-tolino-white/10 rounded-lg px-4 py-2">
+                  <div class="w-2 h-2 bg-tolino-green-light rounded-full animate-pulse"></div>
+                  <span class="text-sm text-tolino-white">Cloud Optimizando...</span>
+                </div>
+                <div class="flex items-center gap-2 bg-tolino-white/10 rounded-lg px-4 py-2">
+                  <div class="w-2 h-2 bg-tolino-green-dark rounded-full animate-pulse"></div>
+                  <span class="text-sm text-tolino-white">Automatizando...</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Elementos decorativos flotantes -->
+        <div class="absolute -top-4 -right-4 w-24 h-24 bg-tolino-green/30 rounded-full blur-xl animate-pulse"></div>
+        <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-tolino-green-dark/30 rounded-full blur-xl animate-pulse" style="animation-delay: 1s;"></div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- Indicador de scroll -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden sm:block">
+    <a href="#servicios" aria-label="Desplazar hacia servicios">
+      <svg class="w-6 h-6 text-tolino-green/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<!-- Features/Servicios Section: Servicios principales con beneficios claros -->
+<section id="servicios" class="py-16 sm:py-20 lg:py-24 bg-tolino-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Encabezado de sección -->
+    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-tolino-gray-800 mb-4">
+        Nuestros Servicios
+      </h2>
+      <p class="text-lg sm:text-xl text-tolino-gray-600 leading-relaxed">
+        Soluciones tecnológicas avanzadas para resolver problemas complejos y acelerar tu transformación digital
+      </p>
+    </div>
+    
+    <!-- Grid de servicios -->
+    <div class="grid md:grid-cols-3 gap-8 lg:gap-10">
+      
+      <!-- Servicio 1: Inteligencia Artificial -->
+      <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-tolino-green/20 transition-all duration-300 p-8 border border-tolino-gray-200 hover:border-tolino-green-500 hover:-translate-y-2 transform" 
+           data-aos="fade-up" data-aos-delay="0">
+        <!-- Icono -->
+        <div class="w-16 h-16 bg-gradient-to-br from-tolino-green to-tolino-green-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+          <svg class="w-8 h-8 text-tolino-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+          </svg>
+        </div>
+        
+        <!-- Contenido -->
+        <h3 class="text-2xl font-bold text-tolino-gray-800 mb-4">
+          Inteligencia Artificial
+        </h3>
+        <p class="text-tolino-gray-600 mb-6 leading-relaxed">
+          Desarrollamos algoritmos de IA personalizados que automatizan procesos complejos y mejoran la toma de decisiones basada en datos.
+        </p>
+        
+        <!-- Lista de características -->
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-tolino-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-sm text-tolino-gray-700 font-medium">Machine Learning avanzado</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-tolino-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-sm text-tolino-gray-700 font-medium">Procesamiento de lenguaje natural</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-tolino-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-sm text-tolino-gray-700 font-medium">Análisis predictivo y forecasting</span>
+          </li>
+        </ul>
+        
+        <!-- CTA secundario -->
+        <a href="#contacto" class="inline-flex items-center text-tolino-green-600 font-semibold hover:text-tolino-green-700 transition-colors group">
+          Más información
+          <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      
+      <!-- Servicio 2: Cloud Computing -->
+      <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-tolino-green/20 transition-all duration-300 p-8 border border-tolino-gray-200 hover:border-tolino-green-500 hover:-translate-y-2 transform" 
+           data-aos="fade-up" data-aos-delay="100">
+        <!-- Icono -->
+        <div class="w-16 h-16 bg-gradient-to-br from-tolino-gray-800 to-tolino-gray-600 rounded-xl flex items-center justify-center mb-6 shadow-lg">
+          <svg class="w-8 h-8 text-tolino-green" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+          </svg>
+        </div>
+        
+        <!-- Contenido -->
+        <h3 class="text-2xl font-bold text-tolino-gray-800 mb-4">
+          Cloud Computing
+        </h3>
+        <p class="text-tolino-gray-600 mb-6 leading-relaxed">
+          Desarrollamos soluciones de software con IA sobre plataformas cloud escalables, resolviendo problemas complejos con arquitecturas modernas en AWS y GCP.
+        </p>
+        
+        <!-- Lista de características -->
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-tolino-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-sm text-tolino-gray-700 font-medium">Desarrollo sobre AWS y GCP</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-tolino-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-sm text-tolino-gray-700 font-medium">Soluciones con IA integrada</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-tolino-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-sm text-tolino-gray-700 font-medium">Arquitecturas escalables y seguras</span>
+          </li>
+        </ul>
+        
+        <!-- CTA secundario -->
+        <a href="#contacto" class="inline-flex items-center text-tolino-green-600 font-semibold hover:text-tolino-green-700 transition-colors group">
+          Más información
+          <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      
+      <!-- Servicio 3: Automatización -->
+      <div class="bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:shadow-tolino-green/20 transition-all duration-300 p-8 border border-tolino-gray-200 hover:border-tolino-green-500 hover:-translate-y-2 transform" 
+           data-aos="fade-up" data-aos-delay="200">
+        <!-- Icono -->
+        <div class="w-16 h-16 bg-gradient-to-br from-tolino-green-600 to-tolino-green rounded-xl flex items-center justify-center mb-6 shadow-lg">
+          <svg class="w-8 h-8 text-tolino-black" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+        </div>
+        
+        <!-- Contenido -->
+        <h3 class="text-2xl font-bold text-tolino-gray-800 mb-4">
+          Automatización
+        </h3>
+        <p class="text-tolino-gray-600 mb-6 leading-relaxed">
+          Automatizamos workflows complejos y procesos empresariales para aumentar la eficiencia y reducir costos operativos.
+        </p>
+        
+        <!-- Lista de características -->
+        <ul class="space-y-3 mb-6">
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-tolino-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-sm text-tolino-gray-700 font-medium">-60% en tareas manuales</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-tolino-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-sm text-tolino-gray-700 font-medium">Workflows personalizados</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <svg class="w-5 h-5 text-tolino-green-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+            </svg>
+            <span class="text-sm text-tolino-gray-700 font-medium">+40% productividad</span>
+          </li>
+        </ul>
+        
+        <!-- CTA secundario -->
+        <a href="#contacto" class="inline-flex items-center text-tolino-green-600 font-semibold hover:text-tolino-green-700 transition-colors group">
+          Más información
+          <svg class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      
+    </div>
+    
+    <!-- CTA de sección -->
+    <div class="mt-16 text-center" data-aos="fade-up" data-aos-delay="300">
+      <p class="text-lg text-tolino-gray mb-6">
+        ¿Listo para transformar tu negocio con tecnología de vanguardia?
+      </p>
+      <a href="#contacto" 
+         class="inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg bg-gradient-to-r from-tolino-green to-tolino-green-dark text-white hover:from-tolino-green-dark hover:to-tolino-black transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
+        Solicitar Demo Gratuita
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+        </svg>
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Products Section: Productos destacados de Tolino Labs -->
+<section id="productos" class="py-16 sm:py-20 lg:py-24 bg-tolino-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Encabezado de sección -->
+    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-tolino-gray-800 mb-4">
+        Nuestros Productos
+      </h2>
+      <p class="text-lg sm:text-xl text-tolino-gray-600 leading-relaxed">
+        Soluciones SaaS potenciadas por IA que ya están transformando negocios en todo el mundo
+      </p>
+    </div>
+    
+    <!-- Grid de productos -->
+    <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+      
+      <!-- Producto 1: Logos.es -->
+      <div class="group relative bg-gradient-to-br from-tolino-white to-tolino-green/5 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 transform" 
+           data-aos="fade-right">
+        
+        <!-- Borde decorativo con gradiente -->
+        <div class="absolute inset-0 bg-gradient-to-br from-tolino-green to-tolino-green-dark opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+        
+        <div class="relative z-10 p-8 lg:p-10">
+          
+          <!-- Badge de categoría -->
+          <div class="inline-flex items-center gap-2 bg-tolino-green-100 text-tolino-green-700 px-3 py-1 rounded-full text-sm font-semibold mb-4 border border-tolino-green-200">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+            </svg>
+            Diseño con IA
+          </div>
+          
+          <!-- Logo/Marca del producto -->
+          <h3 class="text-4xl font-extrabold text-tolino-gray-800 mb-4 flex items-center gap-3">
+            <span class="text-tolino-green-600">Logos</span><span class="text-tolino-gray-500">.es</span>
+          </h3>
+          
+          <!-- Descripción -->
+          <p class="text-lg text-tolino-gray-600 mb-6 leading-relaxed">
+            Crea logos profesionales y personalizados en minutos usando machine learning avanzado. Diseño automatizado de calidad premium.
+          </p>
+          
+          <!-- Características destacadas -->
+          <div class="space-y-3 mb-8">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-tolino-green rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <span class="text-tolino-gray-700"><strong class="text-tolino-gray-800">IA Generativa:</strong> Logos únicos en segundos</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-tolino-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <span class="text-tolino-gray-700"><strong class="text-tolino-gray-800">Personalización total:</strong> Colores, tipografía, estilo</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-tolino-green-600 rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <span class="text-tolino-gray-700"><strong class="text-tolino-gray-800">Exportación Pro:</strong> SVG, PNG, AI, PDF</span>
+            </div>
+          </div>
+          
+          <!-- Métricas del producto -->
+          <div class="grid grid-cols-3 gap-4 p-4 bg-tolino-green-50 backdrop-blur-sm rounded-xl border border-tolino-green-200 mb-6">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-tolino-green-600">10K+</div>
+              <div class="text-xs text-tolino-gray-600 font-medium">Logos Creados</div>
+            </div>
+            <div class="text-center border-x border-tolino-green-200">
+              <div class="text-2xl font-bold text-tolino-green-600">&lt;2min</div>
+              <div class="text-xs text-tolino-gray-600 font-medium">Tiempo Medio</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-tolino-green-600">4.8★</div>
+              <div class="text-xs text-tolino-gray-600 font-medium">Valoración</div>
+            </div>
+          </div>
+          
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="https://logos.es" target="_blank" rel="noopener noreferrer" 
+               class="flex-1 inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-tolino-green to-tolino-green-600 text-tolino-black font-semibold rounded-lg hover:from-tolino-green-600 hover:to-tolino-green-700 transition-all duration-300 shadow-md hover:shadow-lg"
+               aria-label="Visitar Logos.es">
+              Visitar Logos.es
+              <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+            <a href="#contacto" 
+               class="flex-1 inline-flex items-center justify-center px-6 py-3 bg-white text-tolino-green font-semibold rounded-lg border-2 border-tolino-green hover:bg-tolino-green/10 transition-all duration-300"
+               aria-label="Más información sobre Logos.es">
+              Más Info
+            </a>
+          </div>
+        </div>
+        
+        <!-- Elemento decorativo -->
+        <div class="absolute top-4 right-4 w-32 h-32 bg-gradient-to-br from-tolino-green to-tolino-green-light rounded-full opacity-10 blur-3xl group-hover:opacity-20 transition-opacity duration-500"></div>
+      </div>
+      
+      <!-- Producto 2: Renver.es -->
+      <div class="group relative bg-gradient-to-br from-tolino-white to-tolino-green/5 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 transform" 
+           data-aos="fade-left">
+        
+        <!-- Borde decorativo con gradiente -->
+        <div class="absolute inset-0 bg-gradient-to-br from-tolino-green to-tolino-green-dark opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+        
+        <div class="relative z-10 p-8 lg:p-10">
+          
+          <!-- Badge de categoría -->
+          <div class="inline-flex items-center gap-2 bg-tolino-green/20 text-tolino-green-dark px-3 py-1 rounded-full text-sm font-semibold mb-4">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+              <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+            </svg>
+            Renders 3D con IA
+          </div>
+          
+          <!-- Logo/Marca del producto -->
+          <h3 class="text-4xl font-extrabold text-tolino-black mb-4 flex items-center gap-3">
+            <span class="text-tolino-green">Renver</span><span class="text-tolino-silver">.es</span>
+          </h3>
+          
+          <!-- Descripción -->
+          <p class="text-lg text-tolino-gray mb-6 leading-relaxed">
+            Genera renders 3D fotorealistas automáticamente con inteligencia artificial. Visualización profesional sin necesidad de software complejo.
+          </p>
+          
+          <!-- Características destacadas -->
+          <div class="space-y-3 mb-8">
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-tolino-green rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <span class="text-tolino-gray"><strong class="text-tolino-black">Renders fotorealistas:</strong> Calidad profesional</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-tolino-green rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <span class="text-tolino-gray"><strong class="text-tolino-black">Procesamiento IA:</strong> Iluminación y texturas automáticas</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-8 h-8 bg-tolino-green rounded-lg flex items-center justify-center flex-shrink-0">
+                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <span class="text-tolino-gray"><strong class="text-tolino-black">Múltiples formatos:</strong> PNG, JPEG, 4K, 8K</span>
+            </div>
+          </div>
+          
+          <!-- Métricas del producto -->
+          <div class="grid grid-cols-3 gap-4 p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-purple-200 mb-6">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-tolino-green">5K+</div>
+              <div class="text-xs text-tolino-gray">Renders 3D</div>
+            </div>
+            <div class="text-center border-x border-purple-200">
+              <div class="text-2xl font-bold text-tolino-green">&lt;5min</div>
+              <div class="text-xs text-tolino-gray">Generación</div>
+            </div>
+            <div class="text-center">
+              <div class="text-2xl font-bold text-tolino-green">4.9★</div>
+              <div class="text-xs text-tolino-gray">Valoración</div>
+            </div>
+          </div>
+          
+          <!-- CTAs -->
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="https://renver.es" target="_blank" rel="noopener noreferrer" 
+               class="flex-1 inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-tolino-green to-tolino-green-600 text-tolino-black font-semibold rounded-lg hover:from-tolino-green-600 hover:to-tolino-green-700 transition-all duration-300 shadow-md hover:shadow-lg"
+               aria-label="Visitar Renver.es">
+              Visitar Renver.es
+              <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+            <a href="#contacto" 
+               class="flex-1 inline-flex items-center justify-center px-6 py-3 bg-white text-tolino-green font-semibold rounded-lg border-2 border-tolino-green hover:bg-tolino-green/10 transition-all duration-300"
+               aria-label="Más información sobre Renver.es">
+              Más Info
+            </a>
+          </div>
+        </div>
+        
+        <!-- Elemento decorativo -->
+        <div class="absolute top-4 right-4 w-32 h-32 bg-gradient-to-br from-tolino-green to-tolino-green-light rounded-full opacity-10 blur-3xl group-hover:opacity-20 transition-opacity duration-500"></div>
+      </div>
+      
+    </div>
+    
+    <!-- Sección de valor agregado -->
+    <div class="mt-16 bg-gradient-to-r from-tolino-black to-tolino-green rounded-2xl p-8 lg:p-12 text-center text-white" data-aos="fade-up">
+      <h3 class="text-2xl sm:text-3xl font-bold mb-4">
+        ¿Necesitas una solución personalizada?
+      </h3>
+      <p class="text-lg text-tolino-silver mb-6 max-w-2xl mx-auto">
+        Desarrollamos productos SaaS a medida potenciados por IA para resolver problemas específicos de tu industria
+      </p>
+      <a href="#contacto" 
+         class="inline-flex items-center px-8 py-4 bg-white text-tolino-green font-semibold rounded-lg hover:bg-tolino-green-light transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
+        Hablemos de tu Proyecto
+        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+        </svg>
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Stats/Results Section: Métricas y resultados tangibles -->
+<section id="resultados" class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-tolino-black via-tolino-gray to-tolino-black text-white relative overflow-hidden">
+  
+  <!-- Patrón de fondo decorativo -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute inset-0" style="background-image: linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff), linear-gradient(45deg, #fff 25%, transparent 25%, transparent 75%, #fff 75%, #fff); background-size: 60px 60px; background-position: 0 0, 30px 30px;"></div>
+  </div>
+  
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Encabezado de sección -->
+    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4">
+        Resultados que Transforman Negocios
+      </h2>
+      <p class="text-lg sm:text-xl text-tolino-silver leading-relaxed">
+        Métricas reales de empresas que ya confían en nuestras soluciones de IA y cloud computing
+      </p>
+    </div>
+    
+    <!-- Grid principal de estadísticas -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      
+      <!-- Stat 1: Productividad -->
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 transform" 
+           data-aos="zoom-in" data-aos-delay="0">
+        <div class="flex items-center justify-between mb-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+            </svg>
+          </div>
+          <span class="text-green-400 text-sm font-semibold">↑ Aumento</span>
+        </div>
+        <div class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-300 to-green-500 mb-2">
+          +40%
+        </div>
+        <div class="text-xl font-semibold text-white mb-2">
+          Productividad
+        </div>
+        <p class="text-tolino-silver text-sm leading-relaxed">
+          Aumento promedio en la productividad de procesos empresariales automatizados con IA
+        </p>
+      </div>
+      
+      <!-- Stat 2: Reducción de tareas -->
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 transform" 
+           data-aos="zoom-in" data-aos-delay="100">
+        <div class="flex items-center justify-between mb-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-tolino-green to-tolino-green-dark rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"/>
+            </svg>
+          </div>
+          <span class="text-tolino-green-light text-sm font-semibold">↓ Reducción</span>
+        </div>
+        <div class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-tolino-green-light to-tolino-green mb-2">
+          -60%
+        </div>
+        <div class="text-xl font-semibold text-white mb-2">
+          Tareas Manuales
+        </div>
+        <p class="text-tolino-silver text-sm leading-relaxed">
+          Reducción de tiempo dedicado a tareas manuales repetitivas mediante automatización inteligente
+        </p>
+      </div>
+      
+      <!-- Stat 3: Disponibilidad -->
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 transform" 
+           data-aos="zoom-in" data-aos-delay="200">
+        <div class="flex items-center justify-between mb-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-tolino-green to-tolino-green-dark rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <span class="text-tolino-green-light text-sm font-semibold">Garantizado</span>
+        </div>
+        <div class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-tolino-green-light to-tolino-green mb-2">
+          99.9%
+        </div>
+        <div class="text-xl font-semibold text-white mb-2">
+          Disponibilidad
+        </div>
+        <p class="text-tolino-silver text-sm leading-relaxed">
+          Uptime garantizado en nuestras arquitecturas cloud escalables con AWS y GCP
+        </p>
+      </div>
+      
+      <!-- Stat 4: Tiempo de implementación -->
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 transform" 
+           data-aos="zoom-in" data-aos-delay="300">
+        <div class="flex items-center justify-between mb-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <span class="text-yellow-400 text-sm font-semibold">Rápido</span>
+        </div>
+        <div class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-tolino-green-light to-tolino-green mb-2">
+          &lt;30
+        </div>
+        <div class="text-xl font-semibold text-white mb-2">
+          Días Setup
+        </div>
+        <p class="text-tolino-silver text-sm leading-relaxed">
+          Tu solución de IA funcionando en producción en menos de un mes desde el inicio del proyecto
+        </p>
+      </div>
+      
+      <!-- Stat 5: ROI -->
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 transform" 
+           data-aos="zoom-in" data-aos-delay="400">
+        <div class="flex items-center justify-between mb-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-pink-400 to-rose-600 rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <span class="text-pink-400 text-sm font-semibold">ROI</span>
+        </div>
+        <div class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-300 to-rose-400 mb-2">
+          300%
+        </div>
+        <div class="text-xl font-semibold text-white mb-2">
+          Retorno de Inversión
+        </div>
+        <p class="text-tolino-silver text-sm leading-relaxed">
+          ROI promedio alcanzado por nuestros clientes en el primer año de implementación
+        </p>
+      </div>
+      
+      <!-- Stat 6: Soporte -->
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105 transform" 
+           data-aos="zoom-in" data-aos-delay="500">
+        <div class="flex items-center justify-between mb-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-tolino-green to-tolino-green-dark rounded-lg flex items-center justify-center">
+            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+          </div>
+          <span class="text-tolino-green-light text-sm font-semibold">24/7</span>
+        </div>
+        <div class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-tolino-green-light to-tolino-green mb-2">
+          24/7
+        </div>
+        <div class="text-xl font-semibold text-white mb-2">
+          Soporte Continuo
+        </div>
+        <p class="text-tolino-silver text-sm leading-relaxed">
+          Equipo de especialistas disponible las 24 horas para garantizar el éxito de tu proyecto
+        </p>
+      </div>
+      
+    </div>
+    
+    <!-- CTA de sección con urgencia -->
+    <div class="max-w-4xl mx-auto bg-gradient-to-r from-tolino-green to-tolino-green-dark rounded-2xl p-8 lg:p-12 text-center shadow-2xl" data-aos="fade-up">
+      <div class="inline-flex items-center gap-2 bg-yellow-400 text-yellow-900 px-4 py-2 rounded-full text-sm font-bold mb-4">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+          <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+        </svg>
+        Oferta Limitada
+      </div>
+      <h3 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold mb-4">
+        ¿Listo para obtener estos resultados en tu empresa?
+      </h3>
+      <p class="text-lg text-tolino-silver mb-8 max-w-2xl mx-auto">
+        Agenda una <strong>consultoría gratuita</strong> y descubre cómo la IA y el cloud computing pueden transformar tu negocio en menos de 30 días
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contacto" 
+           class="inline-flex items-center justify-center px-8 py-4 bg-white text-tolino-green font-bold text-lg rounded-lg hover:bg-tolino-green-light transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform">
+          Agenda tu Consultoría Gratuita
+          <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+          </svg>
+        </a>
+        <a href="#casos-exito" 
+           class="inline-flex items-center justify-center px-8 py-4 bg-white/10 backdrop-blur-sm border-2 border-white text-white font-bold text-lg rounded-lg hover:bg-white/20 transition-all duration-300">
+          Ver Casos de Éxito
+        </a>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- Testimonials Section: Prueba social con testimonios de clientes -->
+<section id="casos-exito" class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-tolino-white via-tolino-white to-tolino-green/5">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Encabezado de sección -->
+    <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-tolino-black mb-4">
+        Lo Que Dicen Nuestros Clientes
+      </h2>
+      <p class="text-lg sm:text-xl text-tolino-gray leading-relaxed">
+        Casos reales de empresas que han transformado sus operaciones con nuestras soluciones de IA y cloud
+      </p>
+    </div>
+    
+    <!-- Grid de testimonios -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      
+      <!-- Testimonio 1 -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 transform" 
+           data-aos="fade-up" data-aos-delay="0">
+        
+        <!-- Rating -->
+        <div class="flex items-center gap-1 mb-4">
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+        </div>
+        
+        <!-- Testimonio -->
+        <p class="text-tolino-gray leading-relaxed mb-6 italic">
+          "Tolino Labs transformó completamente nuestra operación. En menos de un mes implementaron un sistema de IA que automatizó el 70% de nuestros procesos manuales. El ROI fue increíble."
+        </p>
+        
+        <!-- Resultado destacado -->
+        <div class="bg-tolino-green/10 rounded-lg p-4 mb-6 border-l-4 border-tolino-green">
+          <div class="text-2xl font-bold text-tolino-green">+250%</div>
+          <div class="text-sm text-tolino-gray">Aumento en eficiencia operativa</div>
+        </div>
+        
+        <!-- Autor -->
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-tolino-green to-tolino-green-dark rounded-full flex items-center justify-center text-white font-bold text-lg">
+            JL
+          </div>
+          <div>
+            <div class="font-semibold text-tolino-black">Jorge López</div>
+            <div class="text-sm text-tolino-silver">CTO, TechCorp</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonio 2 -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 transform" 
+           data-aos="fade-up" data-aos-delay="100">
+        
+        <!-- Rating -->
+        <div class="flex items-center gap-1 mb-4">
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+        </div>
+        
+        <!-- Testimonio -->
+        <p class="text-tolino-gray leading-relaxed mb-6 italic">
+          "La migración a cloud con Tolino Labs fue impecable. Pasamos de tener downtime constante a 99.9% de disponibilidad. Su arquitectura es robusta y escalable."
+        </p>
+        
+        <!-- Resultado destacado -->
+        <div class="bg-tolino-green/10 rounded-lg p-4 mb-6 border-l-4 border-tolino-green">
+          <div class="text-2xl font-bold text-tolino-green">99.9%</div>
+          <div class="text-sm text-tolino-gray">Disponibilidad del sistema</div>
+        </div>
+        
+        <!-- Autor -->
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-tolino-green to-tolino-green-dark rounded-full flex items-center justify-center text-white font-bold text-lg">
+            MR
+          </div>
+          <div>
+            <div class="font-semibold text-tolino-black">María Rodríguez</div>
+            <div class="text-sm text-tolino-silver">CEO, FinTech Solutions</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Testimonio 3 -->
+      <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 transform" 
+           data-aos="fade-up" data-aos-delay="200">
+        
+        <!-- Rating -->
+        <div class="flex items-center gap-1 mb-4">
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+          <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+          </svg>
+        </div>
+        
+        <!-- Testimonio -->
+        <p class="text-tolino-gray leading-relaxed mb-6 italic">
+          "El análisis predictivo que desarrollaron nos ayudó a anticipar demanda y optimizar inventario. Redujimos costos en un 45% y mejoramos el servicio al cliente."
+        </p>
+        
+        <!-- Resultado destacado -->
+        <div class="bg-tolino-green/10 rounded-lg p-4 mb-6 border-l-4 border-tolino-green">
+          <div class="text-2xl font-bold text-tolino-green">-45%</div>
+          <div class="text-sm text-tolino-gray">Reducción en costos operativos</div>
+        </div>
+        
+        <!-- Autor -->
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 bg-gradient-to-br from-tolino-green to-tolino-green-dark rounded-full flex items-center justify-center text-white font-bold text-lg">
+            CS
+          </div>
+          <div>
+            <div class="font-semibold text-tolino-black">Carlos Sánchez</div>
+            <div class="text-sm text-tolino-silver">Director, RetailMax</div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+    <!-- Logos de clientes (placeholder) -->
+    <div class="max-w-5xl mx-auto" data-aos="fade-up">
+      <div class="text-center mb-8">
+        <p class="text-sm font-semibold text-tolino-silver uppercase tracking-wider">
+          Empresas que confían en nosotros
+        </p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+        <!-- Placeholder logos -->
+        <div class="w-32 h-16 bg-tolino-silver/30 rounded-lg flex items-center justify-center text-tolino-silver font-semibold text-xs">
+          Cliente 1
+        </div>
+        <div class="w-32 h-16 bg-tolino-silver/30 rounded-lg flex items-center justify-center text-tolino-silver font-semibold text-xs">
+          Cliente 2
+        </div>
+        <div class="w-32 h-16 bg-tolino-silver/30 rounded-lg flex items-center justify-center text-tolino-silver font-semibold text-xs">
+          Cliente 3
+        </div>
+        <div class="w-32 h-16 bg-tolino-silver/30 rounded-lg flex items-center justify-center text-tolino-silver font-semibold text-xs">
+          Cliente 4
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<!-- CTA & Form Section: Formulario de contacto optimizado para conversión -->
+<section id="contacto" class="py-16 sm:py-20 lg:py-24 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        
+        <!-- Lado izquierdo: Mensaje y beneficios -->
+        <div data-aos="fade-right">
+          
+          <!-- Badge de urgencia -->
+          <div class="inline-flex items-center gap-2 bg-gradient-to-r from-tolino-green to-tolino-green-light text-white px-4 py-2 rounded-full text-sm font-bold mb-6 shadow-lg">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+            </svg>
+            Consultoría gratuita - Plazas limitadas
+          </div>
+          
+          <!-- Título principal -->
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-tolino-black mb-6 leading-tight">
+            Transforma tu negocio con IA
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-tolino-black to-tolino-green">
+              en menos de 30 días
+            </span>
+          </h2>
+          
+          <!-- Subtítulo -->
+          <p class="text-lg text-tolino-gray mb-8 leading-relaxed">
+            Agenda una consultoría gratuita y descubre cómo podemos automatizar tus procesos, optimizar operaciones y multiplicar tu ROI con tecnología de vanguardia.
+          </p>
+          
+          <!-- Lista de beneficios -->
+          <div class="space-y-4 mb-8">
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-tolino-black mb-1">Análisis Personalizado</h3>
+                <p class="text-tolino-gray">Evaluamos tu negocio y diseñamos una solución a medida</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 bg-gradient-to-br from-tolino-green to-tolino-green-dark rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-tolino-black mb-1">Sin Compromiso</h3>
+                <p class="text-tolino-gray">Consultoría 100% gratuita, sin obligación de contratación</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 bg-gradient-to-br from-tolino-green to-tolino-green-dark rounded-lg flex items-center justify-center flex-shrink-0 shadow-md">
+                <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-semibold text-tolino-black mb-1">Respuesta en 24h</h3>
+                <p class="text-tolino-gray">Nuestro equipo se pondrá en contacto contigo en menos de un día</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Prueba social adicional -->
+          <div class="bg-gradient-to-r from-tolino-white to-tolino-green/5 rounded-xl p-6 border border-tolino-green/20">
+            <div class="flex items-center gap-4 mb-3">
+              <div class="flex -space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-tolino-green to-tolino-green-dark rounded-full border-2 border-white flex items-center justify-center text-white font-bold text-sm">A</div>
+                <div class="w-10 h-10 bg-gradient-to-br from-tolino-green to-tolino-green-dark rounded-full border-2 border-white flex items-center justify-center text-white font-bold text-sm">B</div>
+                <div class="w-10 h-10 bg-gradient-to-br from-tolino-green to-tolino-green-dark rounded-full border-2 border-white flex items-center justify-center text-white font-bold text-sm">C</div>
+              </div>
+              <div class="flex items-center gap-1">
+                <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                </svg>
+                <span class="font-bold text-tolino-black">4.9/5</span>
+              </div>
+            </div>
+            <p class="text-sm text-tolino-gray">
+              <strong>+150 empresas</strong> ya han transformado sus operaciones con Tolino Labs
+            </p>
+          </div>
+          
+        </div>
+        
+        <!-- Lado derecho: Formulario -->
+        <div data-aos="fade-left">
+          <div class="bg-gradient-to-br from-tolino-black to-tolino-green rounded-3xl shadow-2xl p-8 lg:p-10">
+            
+            <h3 class="text-2xl font-bold text-white mb-6">
+              Solicita tu Consultoría Gratuita
+            </h3>
+            
+            <!-- Formulario -->
+            <form class="space-y-5" id="contact-form" action="#" method="POST" onsubmit="return handleFormSubmit(event)">
+              
+              <!-- Nombre -->
+              <div>
+                <label for="nombre" class="block text-sm font-medium text-white mb-2">
+                  Nombre completo *
+                </label>
+                <input 
+                  type="text" 
+                  id="nombre" 
+                  name="nombre" 
+                  required 
+                  class="w-full px-4 py-3 rounded-lg bg-white/90 backdrop-blur-sm border-2 border-transparent focus:border-tolino-green focus:bg-white focus:outline-none transition-all duration-300 text-tolino-black"
+                  placeholder="Tu nombre"
+                  aria-required="true">
+              </div>
+              
+              <!-- Email -->
+              <div>
+                <label for="email" class="block text-sm font-medium text-white mb-2">
+                  Email corporativo *
+                </label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required 
+                  class="w-full px-4 py-3 rounded-lg bg-white/90 backdrop-blur-sm border-2 border-transparent focus:border-tolino-green focus:bg-white focus:outline-none transition-all duration-300 text-tolino-black"
+                  placeholder="tu@empresa.com"
+                  aria-required="true">
+              </div>
+              
+              <!-- Teléfono -->
+              <div>
+                <label for="telefono" class="block text-sm font-medium text-white mb-2">
+                  Teléfono *
+                </label>
+                <input 
+                  type="tel" 
+                  id="telefono" 
+                  name="telefono" 
+                  required 
+                  class="w-full px-4 py-3 rounded-lg bg-white/90 backdrop-blur-sm border-2 border-transparent focus:border-tolino-green focus:bg-white focus:outline-none transition-all duration-300 text-tolino-black"
+                  placeholder="+34 600 000 000"
+                  aria-required="true">
+              </div>
+              
+              <!-- Empresa -->
+              <div>
+                <label for="empresa" class="block text-sm font-medium text-white mb-2">
+                  Empresa *
+                </label>
+                <input 
+                  type="text" 
+                  id="empresa" 
+                  name="empresa" 
+                  required 
+                  class="w-full px-4 py-3 rounded-lg bg-white/90 backdrop-blur-sm border-2 border-transparent focus:border-tolino-green focus:bg-white focus:outline-none transition-all duration-300 text-tolino-black"
+                  placeholder="Nombre de tu empresa"
+                  aria-required="true">
+              </div>
+              
+              <!-- Mensaje -->
+              <div>
+                <label for="mensaje" class="block text-sm font-medium text-white mb-2">
+                  ¿Cómo podemos ayudarte? *
+                </label>
+                <textarea 
+                  id="mensaje" 
+                  name="mensaje" 
+                  rows="4" 
+                  required 
+                  class="w-full px-4 py-3 rounded-lg bg-white/90 backdrop-blur-sm border-2 border-transparent focus:border-tolino-green focus:bg-white focus:outline-none transition-all duration-300 text-tolino-black resize-none"
+                  placeholder="Cuéntanos sobre tu proyecto o desafío empresarial..."
+                  aria-required="true"></textarea>
+              </div>
+              
+              <!-- Checkbox de privacidad -->
+              <div class="flex items-start gap-3">
+                <input 
+                  type="checkbox" 
+                  id="privacidad" 
+                  name="privacidad" 
+                  required 
+                  class="w-5 h-5 rounded border-2 border-white/50 bg-white/20 text-yellow-400 focus:ring-2 focus:ring-yellow-400 focus:ring-offset-2 focus:ring-offset-blue-600 mt-0.5"
+                  aria-required="true">
+                <label for="privacidad" class="text-sm text-white/90">
+                  Acepto la <a href="#" class="underline hover:text-yellow-400 transition-colors">política de privacidad</a> y el tratamiento de mis datos personales
+                </label>
+              </div>
+              
+              <!-- Botón de envío -->
+              <button 
+                type="submit" 
+                class="w-full bg-gradient-to-r from-tolino-green to-tolino-green-light text-tolino-black font-bold py-4 px-8 rounded-lg hover:from-tolino-green-dark hover:to-tolino-green transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform flex items-center justify-center gap-2 group">
+                Solicitar Consultoría Gratuita
+                <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                </svg>
+              </button>
+              
+              <!-- Mensaje de confirmación -->
+              <p class="text-xs text-white/80 text-center">
+                🔒 Tus datos están seguros. No compartimos información con terceros.
+              </p>
+              
+            </form>
+            
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<script>
+// Función de manejo del formulario (ejemplo básico)
+function handleFormSubmit(event) {
+  event.preventDefault();
+  
+  // Obtener datos del formulario
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+  
+  // Validación básica del lado del cliente
+  if (!data.nombre || !data.email || !data.telefono || !data.empresa || !data.mensaje) {
+    alert('Por favor, completa todos los campos obligatorios.');
+    return false;
+  }
+  
+  if (!data.privacidad) {
+    alert('Debes aceptar la política de privacidad para continuar.');
+    return false;
+  }
+  
+  // Aquí iría la integración con tu servicio de email/CRM
+  // Por ejemplo: envío a un webhook, Zapier, Make, o directamente a tu API
+  
+  console.log('Datos del formulario:', data);
+  
+  // Mostrar mensaje de éxito
+  alert('¡Gracias por tu interés! Nos pondremos en contacto contigo en menos de 24 horas.');
+  
+  // Resetear formulario
+  event.target.reset();
+  
+  // Opcional: redirigir a página de gracias
+  // window.location.href = '/gracias.html';
+  
+  return false;
+}
+</script>
+
+<!-- Footer: Información de contacto, enlaces y redes sociales -->
+<footer class="bg-tolino-black text-tolino-silver">
+  
+  <!-- Sección principal del footer -->
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+      
+      <!-- Columna 1: Sobre Tolino Labs -->
+      <div class="lg:col-span-1">
+        <div class="flex items-center gap-2 mb-4">
+          <!-- Logo -->
+          <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+            <span class="text-white font-bold text-xl">T</span>
+          </div>
+          <h3 class="text-xl font-bold text-white">Tolino Labs</h3>
+        </div>
+        <p class="text-tolino-silver leading-relaxed mb-6">
+          Transformamos negocios con inteligencia artificial y cloud computing. Soluciones innovadoras para empresas que buscan liderar su industria.
+        </p>
+        
+        <!-- Redes sociales -->
+        <div class="flex items-center gap-4">
+          <a href="https://www.linkedin.com/company/tolino-labs" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="w-10 h-10 bg-gray-800 hover:bg-tolino-green rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 transform"
+             aria-label="LinkedIn de Tolino Labs">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+          </a>
+          <a href="#" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="w-10 h-10 bg-gray-800 hover:bg-blue-400 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 transform"
+             aria-label="Twitter de Tolino Labs">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+            </svg>
+          </a>
+          <a href="#" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="w-10 h-10 bg-gray-800 hover:bg-pink-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 transform"
+             aria-label="Instagram de Tolino Labs">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Columna 2: Servicios -->
+      <div>
+        <h4 class="text-lg font-bold text-white mb-4">Servicios</h4>
+        <ul class="space-y-3">
+          <li>
+            <a href="#servicios" class="hover:text-white transition-colors hover:translate-x-1 inline-block transform duration-300">
+              Inteligencia Artificial
+            </a>
+          </li>
+          <li>
+            <a href="#servicios" class="hover:text-white transition-colors hover:translate-x-1 inline-block transform duration-300">
+              Cloud Computing
+            </a>
+          </li>
+          <li>
+            <a href="#servicios" class="hover:text-white transition-colors hover:translate-x-1 inline-block transform duration-300">
+              Automatización
+            </a>
+          </li>
+          <li>
+            <a href="#productos" class="hover:text-white transition-colors hover:translate-x-1 inline-block transform duration-300">
+              Desarrollo de Software
+            </a>
+          </li>
+          <li>
+            <a href="#contacto" class="hover:text-white transition-colors hover:translate-x-1 inline-block transform duration-300">
+              Consultoría Tecnológica
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Columna 3: Productos -->
+      <div>
+        <h4 class="text-lg font-bold text-white mb-4">Productos</h4>
+        <ul class="space-y-3">
+          <li>
+            <a href="https://logos.es" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors hover:translate-x-1 inline-block transform duration-300 flex items-center gap-2">
+              Logos.es
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://renver.es" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors hover:translate-x-1 inline-block transform duration-300 flex items-center gap-2">
+              Renver.es
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="#contacto" class="hover:text-white transition-colors hover:translate-x-1 inline-block transform duration-300">
+              Soluciones Personalizadas
+            </a>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Columna 4: Contacto -->
+      <div>
+        <h4 class="text-lg font-bold text-white mb-4">Contacto</h4>
+        <ul class="space-y-3">
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-tolino-green-light mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+            <a href="mailto:hola@tolinolabs.com" class="hover:text-white transition-colors">
+              hola@tolinolabs.com
+            </a>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-tolino-green-light mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>España</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-tolino-green-light mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+            <span>Soporte 24/7</span>
+          </li>
+        </ul>
+        
+        <!-- CTA en footer -->
+        <div class="mt-6">
+          <a href="#contacto" 
+             class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-tolino-black to-tolino-green text-white font-semibold rounded-lg hover:from-tolino-green-dark hover:to-tolino-black transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform">
+            Contáctanos
+            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+  <!-- Barra inferior del footer -->
+  <div class="border-t border-gray-800">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        
+        <!-- Copyright -->
+        <div class="text-sm text-tolino-silver">
+          © 2025 <span class="text-white font-semibold">Tolino Labs</span>. Todos los derechos reservados.
+        </div>
+        
+        <!-- Enlaces legales -->
+        <div class="flex items-center gap-6 text-sm">
+          <a href="#" class="text-tolino-silver hover:text-white transition-colors">
+            Política de Privacidad
+          </a>
+          <a href="#" class="text-tolino-silver hover:text-white transition-colors">
+            Términos de Servicio
+          </a>
+          <a href="#" class="text-tolino-silver hover:text-white transition-colors">
+            Cookies
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</footer>
+
+<!-- Botón de scroll to top -->
+<button 
+  id="scrollToTop" 
+  class="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-br from-tolino-black to-tolino-green text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 transform flex items-center justify-center z-50 opacity-0 pointer-events-none"
+  aria-label="Volver arriba"
+  onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+  </svg>
+</button>
+
+<script>
+// Mostrar/ocultar botón de scroll to top
+window.addEventListener('scroll', function() {
+  const scrollToTopBtn = document.getElementById('scrollToTop');
+  if (window.pageYOffset > 300) {
+    scrollToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+    scrollToTopBtn.classList.add('opacity-100');
+  } else {
+    scrollToTopBtn.classList.add('opacity-0', 'pointer-events-none');
+    scrollToTopBtn.classList.remove('opacity-100');
+  }
+});
+</script>
+
+</main>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({ duration: 800, once: true });
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>

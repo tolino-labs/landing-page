@@ -1,0 +1,16 @@
+# robots.txt para Tolino Labs
+# Permite a todos los bots indexar todo el contenido
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://tolinolabs.com/sitemap.xml
+
+# Crawl-delay (opcional - ajustar según necesidad)
+# Crawl-delay: 10
+
+# Prevenir indexación de recursos específicos si es necesario
+# Disallow: /admin/
+# Disallow: /private/
+
